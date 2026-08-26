@@ -1,24 +1,62 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/site/Layout";
+import { Hero, Services, FreeAudit, Process, About, Contact } from "@/components/site/sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Web Marketing Group | SEO & AEO Agency for Measurable Growth" },
+      {
+        name: "description",
+        content:
+          "US-based agency growing your visibility in Google and AI answer engines through SEO, AEO and competitor-driven content strategy. Claim your free audit.",
+      },
+      { property: "og:title", content: "Web Marketing Group | SEO & AEO Agency" },
+      {
+        property: "og:description",
+        content:
+          "SEO, Answer Engine Optimization and competitor content strategy that turn search visibility into revenue. Free website, social and Google Business audit.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Web Marketing Group LLC",
+          email: "invoice@webmgllc.com",
+          url: "https://webmarketinggroup.io",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "1309 Coffeen Avenue, Suite 3056",
+            addressLocality: "Sheridan",
+            addressRegion: "WY",
+            postalCode: "82801",
+            addressCountry: "US",
+          },
+          areaServed: "US",
+          description:
+            "Digital marketing agency specializing in SEO, Answer Engine Optimization (AEO) and competitor content strategy.",
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout>
+      <Hero />
+      <Services />
+      <FreeAudit />
+      <Process />
+      <About />
+      <Contact />
+    </SiteLayout>
   );
 }
