@@ -274,10 +274,10 @@ export function Contact() {
               <div>
                 <p className="font-semibold">Email</p>
                 <a
-                  href="mailto:invoice@webmgllc.com"
+                  href="mailto:support@webmarketinggroup.online"
                   className="mt-1 block text-sm text-muted-foreground transition-colors hover:text-gold"
                 >
-                  invoice@webmgllc.com
+                  support@webmarketinggroup.online
                 </a>
               </div>
             </div>
