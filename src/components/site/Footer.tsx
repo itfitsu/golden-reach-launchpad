@@ -60,8 +60,8 @@ export function Footer() {
             </p>
             <p className="flex gap-2">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              <a href="mailto:invoice@webmgllc.com" className="hover:text-gold">
-                invoice@webmgllc.com
+              <a href="mailto:support@webmarketinggroup.online" className="hover:text-gold">
+                support@webmarketinggroup.online
               </a>
             </p>
           </address>

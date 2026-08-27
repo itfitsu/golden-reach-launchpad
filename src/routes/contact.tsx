@@ -9,7 +9,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact Web Marketing Group LLC at 1309 Coffeen Avenue, Suite 3056, Sheridan, WY 82801 or email invoice@webmgllc.com for SEO and AEO support.",
+          "Contact Web Marketing Group LLC at 1309 Coffeen Avenue, Suite 3056, Sheridan, WY 82801 or email support@webmarketinggroup.online for SEO and AEO support.",
       },
       { property: "og:title", content: "Contact Web Marketing Group LLC" },
       {

@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           name: "Web Marketing Group LLC",
-          email: "invoice@webmgllc.com",
+          email: "support@webmarketinggroup.online",
           url: "https://webmarketinggroup.io",
           address: {
             "@type": "PostalAddress",
